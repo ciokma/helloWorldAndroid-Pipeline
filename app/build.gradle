@@ -5,19 +5,20 @@ plugins {
 
 android {
     namespace 'com.example.greetingcard'
-    compileSdk 25
+    compileSdk 30
 
     defaultConfig {
         applicationId "com.example.greetingcard"
         minSdk 21
-        targetSdk 25
+        targetSdk 30
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary true
+        buildToolsVersion "29.0.3"
+        configurations.all {
+            resolutionStrategy { force 'androidx.work:work-runtime:2.6.0' }
         }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
