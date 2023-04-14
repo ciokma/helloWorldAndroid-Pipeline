@@ -13,11 +13,9 @@ android {
         targetSdk 30
         versionCode 1
         versionName "1.0"
-        buildToolsVersion "29.0.3"
         configurations.all {
             resolutionStrategy { force 'androidx.work:work-runtime:2.6.0' }
         }
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
 
